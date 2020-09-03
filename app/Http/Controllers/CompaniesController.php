@@ -77,11 +77,11 @@ class CompaniesController extends Controller
       // dd($data);
       $companies = Companies::create($data);
       
-      // send new email to registered company use jobs
+      // todo: send new email to registered company use jobs
       // SendCompanyMailJob::dispatch($companies)
       //           ->delay(now()->addSeconds(5));
 
-      // send new mail to registered company use mail
+      // todo: send new mail to registered company use mail
       Mail::send(new CompanyMail($companies));
 
       DB::commit();
